@@ -20,15 +20,15 @@ build:
 
 requirements:
     build:
-        - {{ compiler('cxx') }}  # [not osx]
-        - gcc     # [osx]
-        - cmake
+        - {{ compiler('cxx') }} 
+        #- gcc     # [osx]
+        - cmake <3.25
     host:
-        - libgcc  # [osx]
-        - hdf5
+        #- libgcc  # [osx]
+        - hdf5 1.14.6
     run:
-        - libgcc  # [osx]
-        - hdf5
+        #- libgcc  # [osx]
+        - hdf5 1.14.6
 
 test:
     commands:
